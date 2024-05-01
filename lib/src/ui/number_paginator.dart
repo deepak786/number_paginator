@@ -134,6 +134,7 @@ class NumberPaginatorState extends State<NumberPaginator> {
       child: SizedBox(
         height: widget.config.height,
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: widget.config.mainAxisAlignment,
           children: [
             if (widget.showPrevButton)
