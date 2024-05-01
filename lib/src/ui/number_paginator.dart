@@ -167,7 +167,7 @@ class NumberPaginatorState extends State<NumberPaginator> {
           child: widget.contentBuilder!(_controller.currentPage),
         )
       else if (widget.config.mode != ContentDisplayMode.hidden)
-        Expanded(
+        Flexible(
           child: Container(
             padding: widget.config.contentPadding,
             child: PaginatorContent(
