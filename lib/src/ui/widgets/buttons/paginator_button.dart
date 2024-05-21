@@ -11,12 +11,17 @@ class PaginatorButton extends StatelessWidget {
   /// Whether the button is currently selected.
   final bool selected;
 
+  /// Margin around the button.
+  /// Defaults to EdgeInsets.all(4.0).
+  final EdgeInsets margin;
+
   /// Creates an instance of [PaginatorButton].
   const PaginatorButton({
     Key? key,
     required this.onPressed,
     required this.child,
     this.selected = false,
+    this.margin = const EdgeInsets.all(4.0),
   }) : super(key: key);
 
   @override
@@ -25,7 +30,7 @@ class PaginatorButton extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1,
       child: Padding(
-        padding: const EdgeInsets.all(4.0),
+        padding: margin,
         child: TextButton(
           onPressed: onPressed,
           style: TextButton.styleFrom(

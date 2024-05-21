@@ -143,6 +143,7 @@ class NumberPaginatorState extends State<NumberPaginator> {
                     onPressed:
                         _controller.currentPage > 0 ? _controller.prev : null,
                     child: widget.prevButtonContent,
+                    margin: const EdgeInsets.only(top: 4, right: 4, bottom: 4),
                   ),
             ..._buildCenterContent(),
             if (widget.showNextButton)
@@ -152,6 +153,7 @@ class NumberPaginatorState extends State<NumberPaginator> {
                         ? _controller.next
                         : null,
                     child: widget.nextButtonContent,
+                    margin: const EdgeInsets.only(left: 4, top: 4, bottom: 4),
                   ),
           ],
         ),
